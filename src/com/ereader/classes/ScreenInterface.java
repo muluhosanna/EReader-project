@@ -1,6 +1,6 @@
 package com.ereader.classes;
 
 public interface ScreenInterface {
-    int getSize();
-    boolean isButtonOnly();
+   // int getSize();
+    boolean isButton();
 }

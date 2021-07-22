@@ -1,25 +1,25 @@
 package com.ereader.classes;
 
 public class SerialNumberGenerator {
-    private static SerialNumberGenerator one;
+    private static SerialNumberGenerator serial1;
     private static int UpcNumber;
     private static int  count;
 
     public static synchronized SerialNumberGenerator getInstance() {
         //modelNumber = model;
         //start = startNumber;
-        if (one == null) {
-            one = new SerialNumberGenerator();
+        if (serial1 == null) {
+            serial1 = new SerialNumberGenerator();
         }
-        return one;
+        return serial1;
     }
     private SerialNumberGenerator(){}
 
     public synchronized void setUpcNumberAndCount(int upcNumber, int CountNumber) {
-        UpcNumber =UpcNumber;
+        UpcNumber =upcNumber;
         count = CountNumber;
     }
 
-    public synchronized long getNextSerial(){return UpcNumber + ++count;}
+    public synchronized String getNextSerial(){return UpcNumber + "" + ++count;}
     public synchronized int getRecentNumber(){ return count;}
 }

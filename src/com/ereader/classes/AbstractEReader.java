@@ -5,16 +5,16 @@ public abstract class AbstractEReader implements EReaderInterface {
     private EReaderColor color;
     private int size;
 
-   protected long SerialNumber;
+   protected String SerialNumber;
 
     protected AbstractEReader(ScreenInterface screen, EReaderColor color){
         this.screen = screen;
         this.color = color;
     }
-    public void setSerialNumber(long serial){
+    public void setSerialNumber(String serial){
         this.SerialNumber = serial;
     }
-    public long getSerialNumber(){
+    public String getSerialNumber(){
         return SerialNumber;
     }
     public abstract boolean getIsGpsSupported();
@@ -36,10 +36,12 @@ public abstract int getUpcNumber();
    public abstract int getCountNumber();
    @Override
    public String toString(){
-       return getClass().getSimpleName() + "  " + "\nSerialnumber" + getSerialNumber()+ "\n" +
-               color +"Ereader" +"\nModel" +getModel()+ "\n" +
-               screen + "Ereader" ;
+       return getClass().getSimpleName() + "  " + "\nSerialnumber" +
+               getSerialNumber()+ "\n" +
+               "color" + " "  + color +"\nModel" +getModel()+ "\n" +
+               screen + "Screen" ;
    }
+
 
 
 }
