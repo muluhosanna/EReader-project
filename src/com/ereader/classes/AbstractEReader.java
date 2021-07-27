@@ -11,6 +11,7 @@ public abstract class AbstractEReader implements EReaderInterface {
         this.screen = screen;
         this.color = color;
     }
+
     public void setSerialNumber(String serial){
         this.SerialNumber = serial;
     }
@@ -24,7 +25,9 @@ public abstract class AbstractEReader implements EReaderInterface {
     public abstract boolean getAndroid();
    public abstract boolean getIsGameInstalled();
    public abstract boolean getIsHeadphoneJackSupported();
-public abstract Void paint(EReaderColor color);
+public void paint(EReaderColor color){
+    this.color = color;
+}
     public abstract int getSize();
 public abstract int getUpcNumber();
     public abstract String getModel();

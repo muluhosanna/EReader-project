@@ -1,8 +1,8 @@
 package com.ereader.classes;
 
 public class OldDisplayNine extends AbstractOldDisplay {
-    public OldDisplayNine(ScreenInterface screen, EReaderColor color) {
-        super(screen, color);
+    public OldDisplayNine( EReaderColor color) {
+        super(new TouchOnly(), color);
     }
 
     @Override
@@ -35,10 +35,8 @@ public class OldDisplayNine extends AbstractOldDisplay {
         return true;
     }
 
-    @Override
-    public Void paint(EReaderColor color) {
-        return null;
-    }
+    //@Override
+   // public void paint(EReaderColor color) {return null;}
 
     @Override
     public int getSize() {

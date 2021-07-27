@@ -14,7 +14,7 @@ public interface EReaderInterface {
 
     boolean getIsHeadphoneJackSupported();
 
-    Void paint(EReaderColor color);
+    void paint(EReaderColor color);
 
     int getSize();
 

@@ -1,8 +1,8 @@
 package com.ereader.classes;
 
 public class ElnkNine extends Elnk{
-    public ElnkNine(ScreenInterface screen,EReaderColor color){
-        super(screen, color);
+    public ElnkNine(EReaderColor color){
+        super(new ButtonAndTouch(), color);
     }
 
     @Override
@@ -35,10 +35,8 @@ public class ElnkNine extends Elnk{
         return true;
     }
 
-    @Override
-    public Void paint(EReaderColor color) {
-        return null;
-    }
+    //@Override
+    //public void paint(EReaderColor color) {return null;}
 
     @Override
     public int getSize() {

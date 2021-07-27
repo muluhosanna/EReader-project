@@ -25,7 +25,7 @@ public class ProjectSampleOutPut {
         System.out.println();
 
       for (ElnkNine myNine : inventory.getNineList()){
-          System.out.println(myNine.getSerialNumber());
+         System.out.println(myNine.getSerialNumber());
       }
         System.out.println();
       for (ElnkTwelve myTwelve : inventory.getTwelvesList()){
@@ -45,7 +45,7 @@ public class ProjectSampleOutPut {
       }
     }
     public static void testElnk9(){
-        ElnkNine myNine1 = new ElnkNine(new ButtonAndTouch(),EReaderColor.BLUE) ;
+        ElnkNine myNine1 = new ElnkNine(EReaderColor.BLUE) ;
         System.out.println( "Is the operating system for this E-reader Android ? " + myNine1.getAndroid() );
         System.out.println( "The model of this E-Reader is " +myNine1.getModel());
         System.out.println(myNine1.getIsHeadphoneJackSupported());
@@ -55,7 +55,7 @@ public class ProjectSampleOutPut {
 
     }
     public static void testSerialGen(){
-        ElnkSeven mySeven = new ElnkSeven(new Button(),EReaderColor.BLUE);
+        ElnkSeven mySeven = new ElnkSeven(EReaderColor.BLUE);
         SerialNumberGenerator mySerial = SerialNumberGenerator.getInstance();
         mySerial.setUpcNumberAndCount(mySeven.getUpcNumber(),mySeven.getCountNumber());
        // mySeven.setSerialNumber(mySerial.getNextSerial());
