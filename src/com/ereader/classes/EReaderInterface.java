@@ -17,6 +17,7 @@ public interface EReaderInterface {
     void paint(EReaderColor color);
 
     int getSize();
+    float getPrice();
 
     int getUpcNumber();
    // String getSerialNumber();

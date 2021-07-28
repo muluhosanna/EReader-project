@@ -19,6 +19,13 @@ public class ProjectInventory {
        oldNineList  = new ArrayList<>();
        oldTwelveList = new ArrayList<>();
        generator = SerialNumberGenerator.getInstance();
+        buildElnkSevenInventory();
+        buildELnkNineInventory();
+        buildElnkTwelveInventory();
+        buildOldDisplaySevenInventory();
+        buildOldDisplayNineInventory();
+        buildOldDisplayTwelveInventory();
+
     }
     public ArrayList<ElnkNine> getNineList(){ return nineList; }
     public ArrayList<ElnkTwelve> getTwelvesList(){return twelvesList;}

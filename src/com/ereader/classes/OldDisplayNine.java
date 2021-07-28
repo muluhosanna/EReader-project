@@ -14,6 +14,8 @@ public class OldDisplayNine extends AbstractOldDisplay {
     public boolean getIsWifiSupported() {
         return true;
     }
+    @Override
+    public float getPrice(){return 160.99f;}
 
     @Override
     public boolean getIsSdCardReaderSupported() {

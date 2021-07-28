@@ -4,6 +4,7 @@ public abstract class AbstractEReader implements EReaderInterface {
     private ScreenInterface screen;
     private EReaderColor color;
     private int size;
+    private float price;
 
    protected String SerialNumber;
 
@@ -29,6 +30,7 @@ public void paint(EReaderColor color){
     this.color = color;
 }
     public abstract int getSize();
+public abstract float getPrice();
 public abstract int getUpcNumber();
     public abstract String getModel();
     public boolean getISGameInstalled() {
@@ -39,10 +41,17 @@ public abstract int getUpcNumber();
    public abstract int getCountNumber();
    @Override
    public String toString(){
-       return getClass().getSimpleName() + "  " + "\nSerialnumber" +
+       String price = String.format("%21s", "$"+getPrice());
+       return getClass().getSimpleName() + price +"  " + "\nSerialnumber" +
                getSerialNumber()+ "\n" +
                "color" + " "  + color +"\nModel" +getModel()+ "\n" +
-               screen + "Screen" ;
+               screen  ;
+       /*
+        String price = String.format("%21s", "$"+getPrice());
+        return getClass().getSimpleName() + price +"\nModel #" +getModel()
+                +"\n"+ wheel + "\n"+
+                color + " frame\n" + "Serial # "+ getSerialNumber();
+        */
    }
 
 

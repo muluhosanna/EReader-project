@@ -9,6 +9,9 @@ public class ElnkSeven extends Elnk{
     public boolean getIsGpsSupported() {
         return true;
     }
+    @Override
+    public float getPrice(){ return 169f;
+    }
 
     @Override
     public boolean getIsWifiSupported() {

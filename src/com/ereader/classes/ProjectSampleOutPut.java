@@ -6,7 +6,25 @@ public class ProjectSampleOutPut {
     public static void main(String[] args){
        // testSerialGen();
         //testElnk9();
-        tesInventory();
+       // tesInventory();
+        testProjectOrder();
+       // testList();
+
+    }
+    public static void testList(){
+        ProjectInventory inventory = new ProjectInventory();
+        ArrayList<EReaderInterface>eReader1= new ArrayList<>();
+        eReader1.add(inventory.getOldTwelveList().get(2));
+
+        ProjectSampleReceipt test = new ProjectSampleReceipt(eReader1);
+      //  eReader1.add(new ElnkSeven(EReaderColor.BLACK));
+
+       // eReader1.add(inventory.getSevenList().get(3));
+    }
+    public static void testProjectOrder(){
+        ProjectSampleOrder myOrder = new ProjectSampleOrder();
+        myOrder.welcomeMessage();
+        myOrder.buyEReader();
 
     }
     public static void tesInventory(){

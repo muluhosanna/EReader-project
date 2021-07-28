@@ -19,6 +19,8 @@ public class ElnkTwelve extends Elnk{
     public boolean getIsSdCardReaderSupported() {
         return true;
     }
+    @Override
+    public float getPrice(){return 249f;}
 
     @Override
     public boolean getAndroid() {
