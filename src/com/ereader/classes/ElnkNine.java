@@ -1,9 +1,9 @@
 package com.ereader.classes;
 
-public class ElnkNine extends Elnk{
+public class ElnkNine extends AbstractElnk {
     public ElnkNine(EReaderColor color){
-        super(new ButtonAndTouch(), color);
-    }
+        super(new ButtonAndTouch(), color); }
+    public ElnkNine(){super(new ButtonAndTouch());}
 
     @Override
     public boolean getIsGpsSupported() {

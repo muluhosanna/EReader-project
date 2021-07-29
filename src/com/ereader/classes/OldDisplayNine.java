@@ -4,6 +4,7 @@ public class OldDisplayNine extends AbstractOldDisplay {
     public OldDisplayNine( EReaderColor color) {
         super(new TouchOnly(), color);
     }
+    public OldDisplayNine(){super(new TouchOnly());}
 
     @Override
     public boolean getIsGpsSupported() {

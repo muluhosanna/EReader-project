@@ -6,15 +6,16 @@ public class ProjectSampleOutPut {
     public static void main(String[] args){
        // testSerialGen();
         //testElnk9();
-       // tesInventory();
-        testProjectOrder();
-       // testList();
+       //tesInventory();
+       testProjectOrder();
+       //testReceipt();
 
     }
-    public static void testList(){
+    public static void testReceipt(){
         ProjectInventory inventory = new ProjectInventory();
         ArrayList<EReaderInterface>eReader1= new ArrayList<>();
-        eReader1.add(inventory.getOldTwelveList().get(2));
+        //eReader1.add(inventory.getOldTwelveList().get(2));
+        eReader1.add(inventory.getSevenList().get(2));
 
         ProjectSampleReceipt test = new ProjectSampleReceipt(eReader1);
       //  eReader1.add(new ElnkSeven(EReaderColor.BLACK));
@@ -37,7 +38,7 @@ public class ProjectSampleOutPut {
       inventory.buildOldDisplayNineInventory();
       inventory.buildOldDisplayTwelveInventory();
       for (ElnkSeven mySeven : inventory.getSevenList()){
-          System.out.println(mySeven.getSerialNumber());
+          System.out.println(mySeven);
 
       }
         System.out.println();
@@ -63,7 +64,7 @@ public class ProjectSampleOutPut {
       }
     }
     public static void testElnk9(){
-        ElnkNine myNine1 = new ElnkNine(EReaderColor.BLUE) ;
+        ElnkNine myNine1 = new ElnkNine() ;
         System.out.println( "Is the operating system for this E-reader Android ? " + myNine1.getAndroid() );
         System.out.println( "The model of this E-Reader is " +myNine1.getModel());
         System.out.println(myNine1.getIsHeadphoneJackSupported());
@@ -73,7 +74,7 @@ public class ProjectSampleOutPut {
 
     }
     public static void testSerialGen(){
-        ElnkSeven mySeven = new ElnkSeven(EReaderColor.BLUE);
+        ElnkSeven mySeven = new ElnkSeven();
         SerialNumberGenerator mySerial = SerialNumberGenerator.getInstance();
         mySerial.setUpcNumberAndCount(mySeven.getUpcNumber(),mySeven.getCountNumber());
        // mySeven.setSerialNumber(mySerial.getNextSerial());

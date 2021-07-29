@@ -13,8 +13,8 @@ public class ProjectSampleOrder {
         inventory = new ProjectInventory();
     }
     public void welcomeMessage(){
-        System.out.println("Welcome  to E-Reader Company ");
-        System.out.println("All E-Readers are coming with Charger ,Manual," +
+        System.out.println("Welcome  to E-Reader device Company ");
+        System.out.println("All E-Readers device are coming with Charger ,Manual," +
                 "Head phone jack");
     }
     public void buyEReader(){
@@ -51,14 +51,14 @@ public class ProjectSampleOrder {
 
     private void eReaderColor() {
         System.out.println("What color would you like ?");
-        System.out.println("BLACK, WHITE, ROSEGOLD,CANDY, BLUE");
+        System.out.println("BLACK, WHITE, ROSEGOLD,CANDYBLUE");
         String color = userIn.next();
         validateColorChoice(color);
     }
 
     private void validateColorChoice(String color) {
         switch (color){
-            case "BLACK":
+            case "Black":
                 orderChoice.paint(EReaderColor.BLACK);
                 break;
             case "White":
@@ -67,15 +67,15 @@ public class ProjectSampleOrder {
             case "RoseGold":
                 orderChoice.paint(EReaderColor.ROSEGOLD);
                 break;
-            case "Blue":
-                orderChoice.paint(EReaderColor.BLUE);
+            case "CandyBlue":
+                orderChoice.paint(EReaderColor.CANDYBLUE);
                 break;
-            case "candy":
+            /*case "Candy":
                 orderChoice.paint(EReaderColor.CANDY);
-                break;
+                break;*/
             default:
                 System.out.println("You have entered an in correct color");
-                eReaderColor();
+                //eReaderColor();
                 break;
         }
 

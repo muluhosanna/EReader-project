@@ -43,11 +43,11 @@ public class ProjectInventory {
     public SerialNumberGenerator getGenerator(){ return generator; }
     public void buildElnkSevenInventory() {
         ArrayList<ElnkSeven> list = new ArrayList<>();
-        ElnkSeven seven = new ElnkSeven(EReaderColor.BLACK);
+        ElnkSeven seven = new ElnkSeven();
         generator.setUpcNumberAndCount(seven.getUpcNumber(), seven.getCountNumber());
         for (int i = 0; i <= 10; i++) {
 
-            seven = new ElnkSeven( EReaderColor.ROSEGOLD);
+            seven = new ElnkSeven();
             seven.setSerialNumber(generator.getNextSerial());
              list.add(seven);
             // System.out.println("size is " + seven.getSize());
@@ -59,10 +59,10 @@ public class ProjectInventory {
     }
     public void buildELnkNineInventory(){
         ArrayList<ElnkNine> list2 = new ArrayList<>();
-        ElnkNine nine = new ElnkNine( EReaderColor.WHITE);
+        ElnkNine nine = new ElnkNine( );
         generator.setUpcNumberAndCount(nine.getUpcNumber(),nine.getCountNumber());
         for (int i=0; i<=10;i++){
-            nine = new ElnkNine( EReaderColor.WHITE);
+            nine = new ElnkNine();
             nine.setSerialNumber(generator.getNextSerial());
             list2.add(nine);
         }
@@ -71,10 +71,10 @@ public class ProjectInventory {
     }
     public void buildElnkTwelveInventory(){
         ArrayList<ElnkTwelve> list3 = new ArrayList<>();
-        ElnkTwelve twelve = new ElnkTwelve(EReaderColor.BLACK);
+        ElnkTwelve twelve = new ElnkTwelve();
         generator.setUpcNumberAndCount(twelve.getUpcNumber(),twelve.getCountNumber());
         for (int i = 0; i <= 10; i++){
-            twelve = new ElnkTwelve(EReaderColor.BLACK);
+            twelve = new ElnkTwelve();
             twelve.setSerialNumber(generator.getNextSerial());
             list3.add(twelve);
         }
@@ -83,10 +83,10 @@ public class ProjectInventory {
     }
     public void buildOldDisplaySevenInventory(){
         ArrayList<OldDisplaySeven>list4 = new ArrayList<>();
-        OldDisplaySeven oldSeven = new OldDisplaySeven(EReaderColor.CANDY);
+        OldDisplaySeven oldSeven = new OldDisplaySeven();
         generator.setUpcNumberAndCount(oldSeven.getUpcNumber(),oldSeven.getCountNumber());
         for (int i = 0; i <=10; i++){
-            oldSeven = new OldDisplaySeven(EReaderColor.CANDY);
+            oldSeven = new OldDisplaySeven();
             oldSeven.setSerialNumber(generator.getNextSerial());
             list4.add(oldSeven);
         }
@@ -94,10 +94,10 @@ public class ProjectInventory {
     }
     public void buildOldDisplayNineInventory(){
         ArrayList<OldDisplayNine>list5 = new ArrayList<>();
-        OldDisplayNine oldNine = new OldDisplayNine(EReaderColor.BLUE);
+        OldDisplayNine oldNine = new OldDisplayNine();
         generator.setUpcNumberAndCount(oldNine.getUpcNumber(),oldNine.getCountNumber());
         for (int i = 0; i <=10; i++){
-            oldNine = new OldDisplayNine(EReaderColor.BLUE);
+            oldNine = new OldDisplayNine();
             oldNine.setSerialNumber(generator.getNextSerial());
             list5.add(oldNine);
         }
@@ -106,10 +106,10 @@ public class ProjectInventory {
     }
     public void buildOldDisplayTwelveInventory(){
         ArrayList<OldDisplayTwelve>list6 = new ArrayList<>();
-        OldDisplayTwelve oldTwelve = new OldDisplayTwelve(EReaderColor.BLUE);
+        OldDisplayTwelve oldTwelve = new OldDisplayTwelve();
         generator.setUpcNumberAndCount(oldTwelve.getUpcNumber(),oldTwelve.getCountNumber());
         for (int i = 0; i <=10;i++){
-            oldTwelve = new OldDisplayTwelve(EReaderColor.BLUE);
+            oldTwelve = new OldDisplayTwelve();
             oldTwelve.setSerialNumber(generator.getNextSerial());
             list6.add(oldTwelve);
 

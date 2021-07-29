@@ -14,7 +14,6 @@ public class SerialNumberGenerator {
         return serial1;
     }
     private SerialNumberGenerator(){}
-
     public synchronized void setUpcNumberAndCount(int upcNumber, int CountNumber) {
         UpcNumber =upcNumber;
         count = CountNumber;

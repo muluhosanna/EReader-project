@@ -4,6 +4,7 @@ public class OldDisplaySeven extends AbstractOldDisplay{
     public OldDisplaySeven(EReaderColor color){
         super(new ButtonAndTouch(),color);
     }
+    public OldDisplaySeven(){super(new ButtonAndTouch());}
 
     @Override
     public boolean getIsGpsSupported() {

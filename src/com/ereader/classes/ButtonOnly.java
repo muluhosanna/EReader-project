@@ -1,7 +1,7 @@
 package com.ereader.classes;
 
-public class Button extends AbstractScreen {
-    public Button() {
+public class ButtonOnly extends AbstractScreen {
+    public ButtonOnly() {
         super(true);
     }
     //@Override

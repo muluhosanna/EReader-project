@@ -12,6 +12,9 @@ public abstract class AbstractEReader implements EReaderInterface {
         this.screen = screen;
         this.color = color;
     }
+    protected AbstractEReader(ScreenInterface screen){
+        this.screen = screen;
+    }
 
     public void setSerialNumber(String serial){
         this.SerialNumber = serial;
@@ -42,8 +45,8 @@ public abstract int getUpcNumber();
    @Override
    public String toString(){
        String price = String.format("%21s", "$"+getPrice());
-       return getClass().getSimpleName() + price +"  " + "\nSerialnumber" +
-               getSerialNumber()+ "\n" +
+       return getClass().getSimpleName() + price +"  " + "\nUpc" + getUpcNumber() +
+               "\nSerialnumber" + "" + getSerialNumber()+ "\n" +
                "color" + " "  + color +"\nModel" +getModel()+ "\n" +
                screen  ;
        /*
